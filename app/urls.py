@@ -15,8 +15,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from django.conf import settings
 
+BASE_API_URL = settings.BASE_API_URL
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path(f"{BASE_API_URL}cinema/", include('cinema.urls', namespace='cinema')),
 ]
