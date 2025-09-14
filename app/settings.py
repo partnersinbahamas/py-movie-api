@@ -126,4 +126,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'cinema.User'
 
-BASE_API_URL = 'api/v1/'
+BASE_API_URL = 'api/'
