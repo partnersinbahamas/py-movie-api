@@ -8,7 +8,7 @@ class User(AbstractUser):
 class Movie(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField(null=True, blank=True)
-    duration = models.DurationField(null=True, blank=True)
+    duration = models.IntegerField(null=True, blank=True, default=0)
 
     class Meta:
         verbose_name_plural = "Movies"
